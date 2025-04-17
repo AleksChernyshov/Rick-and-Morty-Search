@@ -42,5 +42,4 @@ A slim, neon‑styled React app that lets you search Rick & Morty characters, v
    npm start
 
 3. **Open in your browser**  
-   ```bash
    Open http://localhost:3000 in your browser.
