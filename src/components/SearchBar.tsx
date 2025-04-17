@@ -12,9 +12,9 @@ export const SearchBar: React.FC<Props> = ({ value, onChange }) => (
     onChange={onChange}
     placeholder="Search for a character..."
     className="
-      w-full p-3 border border-[#39FF14]/50 rounded-lg
-      focus:outline-none focus:border-[#39FF14] text-vt323 text-xl
-      bg-black text-[#E5E5FF]
+      w-full p-3 border-2 border-neon-green/50 rounded-lg
+      focus:outline-none focus:border-neon-green text-vt323 text-xl
+      bg-dark-bg text-white-light
     "
   />
 );
