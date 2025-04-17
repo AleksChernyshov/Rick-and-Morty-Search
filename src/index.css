@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+@keyframes shine {
+  from { transform: translateX(-100%) skewX(-20deg); }
+  to   { transform: translateX(200%) skewX(-20deg); }
+}
+
+.animate-shine {
+  animation: shine 1s linear;
+}
+
+@layer base {
+  html, body {
+    background: radial-gradient(circle at top left, #0f0f0f, #000000) fixed;
+    color: #39FF14;  
+    font-family: 'VT323', monospace;
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: 'Press Start 2P', cursive;
+    color: #E5E5FF;       
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
