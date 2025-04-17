@@ -35,19 +35,22 @@ export const SearchHistory: React.FC = () => {
               group block relative bg-dark-bg overflow-hidden rounded-lg
               shadow-neon transition-transform duration-300 ease-in-out
               hover:scale-105 hover:rotate-1 border-2 border-neon-green/50
+              h-64
             "
           >
             <img
               src={item.character.image}
               alt={item.character.name}
-              className="w-full h-64 object-cover rounded-t-lg"
+              className="w-full h-full object-cover"
             />
-            <div className="
-              absolute bottom-0 left-0 w-full bg-black/80 backdrop-blur-sm
-              text-white-light p-4 transform translate-y-full opacity-0
-              group-hover:translate-y-0 group-hover:opacity-100
-              transition-all duration-500 ease-in-out
-            ">
+            <div
+              className="
+                absolute bottom-0 left-0 w-full bg-black/80 backdrop-blur-sm
+                text-white-light p-4 transform translate-y-full opacity-0
+                group-hover:translate-y-0 group-hover:opacity-100
+                transition-all duration-500 ease-in-out
+              "
+            >
               <h3 className="text-lg font-bold">{item.character.name}</h3>
               <p className="text-sm">
                 {item.character.species} | {item.character.status}

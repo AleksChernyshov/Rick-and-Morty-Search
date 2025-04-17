@@ -7,7 +7,7 @@ import { CharacterProfile } from './pages/CharacterProfile';
 const queryClient = new QueryClient();
 
 const App: React.FC = () => (
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <QueryClientProvider client={queryClient}>
       <Routes>
         <Route path="/" element={<Home />} />

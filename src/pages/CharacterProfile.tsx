@@ -8,7 +8,6 @@ export const CharacterProfile: React.FC = () => {
   const { id } = useParams<'id'>();
   const charId = Number(id);
 
-  // fetch the character data
   const {
     data: character,
     isLoading,
@@ -19,7 +18,6 @@ export const CharacterProfile: React.FC = () => {
     enabled: Boolean(charId),
   });
 
-  // grab history from store to get the timestamp
   const history = useSearchStore(s => s.history);
   const histItem = character
     ? history.find(h => h.character.id === character.id)
@@ -51,7 +49,7 @@ export const CharacterProfile: React.FC = () => {
             {character.name}
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[#E5E5FF] font-medium">
-            {/* Left column: first 4 items */}
+
             <div className="space-y-2">
               <p><strong>Status:</strong> {character.status}</p>
               <p>
@@ -61,7 +59,7 @@ export const CharacterProfile: React.FC = () => {
               <p><strong>Gender:</strong> {character.gender}</p>
               <p><strong>Origin:</strong> {character.origin.name}</p>
             </div>
-            {/* Right column: remaining 3 items + added timestamp */}
+
             <div className="space-y-2">
               <p><strong>Location:</strong> {character.location.name}</p>
               <p><strong>Episodes:</strong> {character.episode.length}</p>
@@ -74,7 +72,7 @@ export const CharacterProfile: React.FC = () => {
               )}
             </div>
           </div>
-          {/* Back button aligned left, white text */}
+
           <div>
             <Link
               to="/"
